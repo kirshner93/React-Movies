@@ -30,7 +30,7 @@ class Search extends React.Component {
     render() {
         return (
             <div className='row'>
-                <div className='input-field col s12'>
+                <div className='search'>
                     <input
                         placeholder='Search'
                         type='search'
@@ -41,44 +41,41 @@ class Search extends React.Component {
                         }}
                         onKeyDown={this.handlerSearch}
                     />
+                    <button className='btn' onClick={this.handlerBTn}>
+                        Search
+                    </button>
                 </div>
-                <button className='btn' onClick={this.handlerBTn}>
-                    Search
-                </button>
+
                 <div>
-                    <p>
-                        <label>
-                            <input
-                                name='type'
-                                value='all'
-                                type='radio'
-                                onChange={this.handlerRadio}
-                            />
-                            <span>ALL</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input
-                                name='type'
-                                value='movie'
-                                type='radio'
-                                onChange={this.handlerRadio}
-                            />
-                            <span>MOVIE</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input
-                                name='type'
-                                value='series'
-                                type='radio'
-                                onChange={this.handlerRadio}
-                            />
-                            <span>SERIES</span>
-                        </label>
-                    </p>
+                    <label>
+                        <input
+                            name='type'
+                            value='all'
+                            type='radio'
+                            onChange={this.handlerRadio}
+                        />
+                        <span>ALL</span>
+                    </label>
+
+                    <label>
+                        <input
+                            name='type'
+                            value='movie'
+                            type='radio'
+                            onChange={this.handlerRadio}
+                        />
+                        <span>MOVIE</span>
+                    </label>
+
+                    <label>
+                        <input
+                            name='type'
+                            value='series'
+                            type='radio'
+                            onChange={this.handlerRadio}
+                        />
+                        <span>SERIES</span>
+                    </label>
                 </div>
             </div>
         );
