@@ -1,7 +1,6 @@
 import { Movie } from './Movie';
 
 function MoviesList(props) {
-    console.log(props);
     const { movies = [] } = props;
     return (
         <div className='MoviesList'>
